@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Imagine2Servo: Diffusion Models for Dynamic Visual Servoing</title>
+  <title>Imagine2Servo: Intelligent Visual Servoing with Diffusion-Driven Goal Generation for Robotic Tasks</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -88,33 +88,32 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Imagine2Servo: Diffusion Models for Dynamic Visual Servoing</h1>
-          <!-- <div class="is-size-5 publication-authors">
+          <h1 class="title is-1 publication-title">Imagine2Servo: Intelligent Visual Servoing with Diffusion-Driven Goal Generation for Robotic Tasks</h1>
+          <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="">Pranjali Pathre</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="">Gunjan Gupta</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="">M. Nomaan Qureshi</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="">Mandyam Brunda</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="">Samarth Brahmbhatt</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="">K. Madhava Krishna</a><sup>1</sup>,
             </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
-          </div> -->
+          </div> 
 
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
-          </div> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Robotics Research Center, IIIT Hyderabad, India
+              </span>
+            <span class="author-block"><sup>2</sup>Carnegie Mellon University, USA</span>
+            <span class="author-block"><sup>3</sup>Intel Labs</span>
+          </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -127,7 +126,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -135,17 +134,8 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
             
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               
               <span class="link-block">
                 <a href=""
@@ -157,14 +147,14 @@
                   </a>
               </span>
               
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
-                  </a>
+                  </a> -->
             </div>
 
           </div>
@@ -178,13 +168,12 @@
   <!-- <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+        <source src="./static/videos/Imagine2Servo_compressed.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <span class="dnerf">Imagine2Servo</span> 
+         turns selfie videos from your phone intofree-viewpoint portraits.
       </h2>
     </div>
   </div> -->
@@ -250,77 +239,80 @@
 
 
 <section class="section">
-  <!-- <div class="container is-max-desktop">
+  <div class="container is-max-desktop">
    
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Visual servoing, the method of controlling robot motion through feedback from visual sensors, has seen significant advancements with the integration of optical flow-based
+methods. However, its application remains limited by inherent
+challenges such as the necessity for a target image at test
+time, the requirement of substantial overlap between initial
+and target images, and the reliance on feedback from a single
+camera. This paper introduces Imagine2Servo, an innovative
+approach leveraging diffusion-based image editing techniques to
+enhance visual servoing algorithms by generating intermediate
+goal images. This methodology allows for the extension of visual
+servoing applications beyond traditional constraints, enabling
+tasks like long-range navigation and manipulation without predefined goal images. We propose a pipeline that synthesizes
+subgoal images grounded in the task at hand, facilitating servoing in scenarios with minimal initial and target image overlap
+and integrating multi-camera feedback for comprehensive task
+execution. Our contributions demonstrate a novel application of
+image generation to robotic control, significantly broadening the
+capabilities of visual servoing systems. Real-world experiments
+validate the effectiveness and versatility of the Imagine2Servo4
+framework in accomplishing a variety of tasks, marking a
+notable advancement in the field of visual servoing
           </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+          
         </div>
       </div>
     </div>
 
-
+<!-- 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+                  <video id="teaser" autoplay muted loop playsinline height="100%">
+                    <source src="./static/videos/Imagine2Servo_compressed.mp4"
+                            type="video/mp4">
+                  </video>
+                  <h2 class="subtitle has-text-centered">
+                    <span class="dnerf">Imagine2Servo</span> 
         </div>
       </div>
-    </div>
+    </div> -->
  
-  </div> -->
+  </div>
 </section>
 
 
 <section class="section">
-  <!-- <div class="container is-max-desktop">
+   <div class="container is-max-desktop">
 
-    <div class="columns is-centered"> -->
+    <div class="columns is-centered">
 
       <!-- Visual Effects. -->
-      <!-- <div class="column">
+      <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Architecture</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            <!-- Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall. -->
+            
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <!-- <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/dollyzoom-stacked.mp4"
                     type="video/mp4">
-          </video>
+          </video> -->
+          <img id="pipeline" src="./static/images/architecture.png" alt="Pipeline Image" width="1000" height="300">
         </div>
-      </div> -->
+      </div>
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
@@ -338,10 +330,193 @@
             </video>
           </div>
 
-        </div>
+        </div>-->
       </div>
-    </div> -->
+    </div> 
+  
+  </section>
+  </b>
+
+  <center><h2 class="title is-3">Qualitative comparision for the task of “crossing the door”</h2></center>
+  <section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-multiline"> <!-- Use is-multiline to allow videos to wrap to the next row if needed -->
+            
+            <!-- Video 1 -->
+            <div class="column is-one-quarter"> <!-- Adjust column size as needed -->
+                <p >Imagine2Servo(Ours)</p>
+                <div class="content">
+                    <p>
+                        <!-- Description for video 1 -->
+                    </p>
+                    <video autoplay controls muted loop playsinline height="50%">
+                        <source src="./static/videos/media1.mov" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            
+            <!-- Video 2 -->
+            <div class="column is-one-quarter"> <!-- Adjust column size as needed -->
+                <p>RTVS</p>
+                <div class="content">
+                    <p>
+                        <!-- Description for video 2 -->
+                    </p>
+                    <video autoplay controls muted loop playsinline height="50%">
+                        <source src="./static/videos/media3.mov" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="column is-one-quarter"> <!-- Adjust column size as needed -->
+              <p>Pose Diffusion</p>
+              <div class="content">
+                  <p>
+                      <!-- Description for video 2 -->
+                  </p>
+                  <video autoplay controls muted loop playsinline height="50%">
+                      <source src="./static/videos/media5.mov" type="video/mp4">
+                  </video>
+              </div>
+          </div>
+
+          <div class="column is-one-quarter"> <!-- Adjust column size as needed -->
+            <p>Cam-Axis</p>
+            <div class="content">
+                <p>
+                    <!-- Description for video 2 -->
+                </p>
+                <video autoplay controls muted loop playsinline height="50%">
+                    <source src="./static/videos/media4.mov" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+            <!-- Add more video elements in a similar manner -->
+        <p>Qualitative contrast: Imagine2Servo converges with sub-goal generation, whereas RTVS diverges. Cam-axis and pose-diffusion methods falter in predicting actions to cross an occluded door.​</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+ <section class="section">
+  <div class="container is-max-desktop">
+      <h2 class="title is-2">Simulation Benchmarks</h2>
+      
+      <!-- Benchmark 1 -->
+      <div class="columns is-multiline">
+          <div class="column is-four-fifths">
+              <h3 class="title is-4">PyBullet</h3>
+              <div class="content">
+                  <div class="columns is-centered">
+                      <div class="column" style="margin-right: 120px;">
+                          <h4 class="title is-6">Cross the door​</h4>
+                          <video autoplay controls muted loop playsinline height="75%">
+                              <source src="./static/videos/media8.mov" type="video/mp4">
+                          </video>
+                          <p>In instances of notable disparities in initial translation and rotation, where the door is scarcely visible, our techniques adeptly model the door to generate sub-goals</p>
+                      </div>
+                      <div class="column" >
+                          <h4 class="title is-6">Move to the front of the door</h4>
+                          <video autoplay controls muted loop playsinline height="75%">
+                              <source src="./static/videos/media9.mov" type="video/mp4">
+                          </video>
+                          <p>Imagine2Servo formulates pertinent sub-goals and designs trajectories to circumnavigate the door safely, avoiding collisions.​</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div> 
  
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Benchmark 2 -->
+      <div class="columns is-multiline">
+          <div class="column is-one-fourth">
+              <h3 class="title is-4">RLBench</h3>
+              <div class="content">
+                  <div class="columns is-centered">
+                      <div class="column">
+                          <h4 class="title is-6">Reach the charger​</h4>
+                          <video autoplay controls muted loop playsinline height="50vh">
+                              <source src="./static/videos/media10.mov" type="video/mp4">
+                          </video>
+                          <p>We achieve a precise end-effector pose required to unplug the charger.</p>
+                      </div>
+                      <div class="column">
+                          <h4 class="title is-6">Reach the moon shaped object​</h4>
+                          <video autoplay controls muted loop playsinline height="50%">
+                              <source src="./static/videos/media11.mov" type="video/mp4">
+                          </video>
+                          <p>Our model accurately discerns the object specified in the textual instruction amidst multiple objects within the scene.​</p>
+                      </div>
+                      <div class="column">
+                          <h4 class="title is-6">Reach the window​</h4>
+                          <video autoplay controls muted loop playsinline height="50%">
+                              <source src="./static/videos/media12.mov" type="video/mp4">
+                          </video>
+                          <p>Despite obscured visibility of the door handle, our model generates sub-goals and takes relevant actions to accomplish the task.​</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div> 
+ 
+  </section>
+
+  <section class="section">
+  <div class="container is-max-desktop">
+      <!-- Benchmark 3 -->
+      <div class="columns is-multiline">
+          <div class="column is-one-fourth">
+              <h3 class="title is-4">xARM7</h3>
+              <div class="content">
+                  <div class="columns is-centered">
+                    
+                      <div class="column">
+                          <h4 class="title is-6">Put the hexagon in the shape sorter</h4>
+                          <video autoplay controls muted loop playsinline height="50%">
+                              <source src="./static/videos/media14.mov" type="video/mp4">
+                          </video>
+                          <p>Our model generates relevant sub-goals and precisely models trajectories to place the hexagon into its shape sorter ​</p>
+                      </div>
+                    
+                    
+                      <div class="column" >
+                          <h4 class="title is-6">Stack on the red square​</h4>
+                          <video autoplay controls muted loop playsinline height="50%">
+                              <source src="./static/videos/media15.mov" type="video/mp4">
+                          </video>
+                          <p>Our model accurately discerns the color and shape specified in the text prompt, even amidst multiple objects sharing identical color and shape within the scene.</p>
+                      </div>
+                      <div class="column" >
+                          <h4 class="title is-6">Stack on the blue circle​</h4>
+                          <video autoplay controls muted loop playsinline height="50%">
+                              <source src="./static/videos/media13.mov" type="video/mp4">
+                          </video>
+                          <p></p>
+                      </div>
+                      <!-- <p>Our model generates relevant sub-goals and precisely models trajectories to place the hexagon into its shape sorter.​</p> -->
+                      
+                            
+                        
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Add more benchmarks as needed -->
+  </div>
+</section>
+
+
 
     <!-- <div class="columns is-centered">
       <div class="column is-full-width">
@@ -433,7 +608,7 @@
     <!--/ Concurrent Work. -->
 
   <!-- </div> -->
-</section>
+<!-- </section> -->
 
 
 <section class="section" id="BibTeX">
