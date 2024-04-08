@@ -138,7 +138,7 @@
             
               
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/pranjali-pathre/Imagine2Servo"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -337,17 +337,17 @@ notable advancement in the field of visual servoing
   </section>
   </b>
 
-  <center><h2 class="title is-3">Qualitative comparision for the task of “crossing the door”</h2></center>
+  <!-- <center><h2 class="title is-3">Qualitative comparision for the task of “crossing the door”</h2></center>
   <section class="section">
     <div class="container is-max-desktop">
-        <div class="columns is-multiline"> <!-- Use is-multiline to allow videos to wrap to the next row if needed -->
+        <div class="columns is-multiline"> 
             
-            <!-- Video 1 -->
-            <div class="column is-one-quarter"> <!-- Adjust column size as needed -->
+          
+            <div class="column is-one-quarter"> 
                 <p >Imagine2Servo(Ours)</p>
                 <div class="content">
                     <p>
-                        <!-- Description for video 1 -->
+                        
                     </p>
                     <video autoplay controls muted loop playsinline height="50%">
                         <source src="./static/videos/media1.mov" type="video/mp4">
@@ -355,12 +355,12 @@ notable advancement in the field of visual servoing
                 </div>
             </div>
             
-            <!-- Video 2 -->
-            <div class="column is-one-quarter"> <!-- Adjust column size as needed -->
+            
+            <div class="column is-one-quarter"> 
                 <p>RTVS</p>
                 <div class="content">
                     <p>
-                        <!-- Description for video 2 -->
+                        
                     </p>
                     <video autoplay controls muted loop playsinline height="50%">
                         <source src="./static/videos/media3.mov" type="video/mp4">
@@ -368,11 +368,11 @@ notable advancement in the field of visual servoing
                 </div>
             </div>
 
-            <div class="column is-one-quarter"> <!-- Adjust column size as needed -->
+            <div class="column is-one-quarter"> 
               <p>Pose Diffusion</p>
               <div class="content">
                   <p>
-                      <!-- Description for video 2 -->
+                      
                   </p>
                   <video autoplay controls muted loop playsinline height="50%">
                       <source src="./static/videos/media5.mov" type="video/mp4">
@@ -380,11 +380,11 @@ notable advancement in the field of visual servoing
               </div>
           </div>
 
-          <div class="column is-one-quarter"> <!-- Adjust column size as needed -->
+          <div class="column is-one-quarter"> 
             <p>Cam-Axis</p>
             <div class="content">
                 <p>
-                    <!-- Description for video 2 -->
+                    
                 </p>
                 <video autoplay controls muted loop playsinline height="50%">
                     <source src="./static/videos/media4.mov" type="video/mp4">
@@ -392,18 +392,18 @@ notable advancement in the field of visual servoing
             </div>
         </div>
 
-            <!-- Add more video elements in a similar manner -->
+           
         <p>Qualitative contrast: Imagine2Servo converges with sub-goal generation, whereas RTVS diverges. Cam-axis and pose-diffusion methods falter in predicting actions to cross an occluded door.​</p>
         </div>
 
     </div>
-</section>
+</section> -->
 
 
 
  <section class="section">
   <div class="container is-max-desktop">
-      <h2 class="title is-2">Simulation Benchmarks</h2>
+      <h2 class="title is-2">Results</h2>
       
       <!-- Benchmark 1 -->
       <div class="columns is-multiline">
@@ -413,14 +413,14 @@ notable advancement in the field of visual servoing
                   <div class="columns is-centered">
                       <div class="column" style="margin-right: 120px;">
                           <h4 class="title is-6">Cross the door​</h4>
-                          <video autoplay controls muted loop playsinline height="75%">
+                          <video controls muted loop playsinline height="75%">
                               <source src="./static/videos/media8.mov" type="video/mp4">
                           </video>
                           <p>In instances of notable disparities in initial translation and rotation, where the door is scarcely visible, our techniques adeptly model the door to generate sub-goals</p>
                       </div>
                       <div class="column" >
                           <h4 class="title is-6">Move to the front of the door</h4>
-                          <video autoplay controls muted loop playsinline height="75%">
+                          <video controls muted loop playsinline height="75%">
                               <source src="./static/videos/media9.mov" type="video/mp4">
                           </video>
                           <p>Imagine2Servo formulates pertinent sub-goals and designs trajectories to circumnavigate the door safely, avoiding collisions.​</p>
@@ -443,21 +443,21 @@ notable advancement in the field of visual servoing
                   <div class="columns is-centered">
                       <div class="column">
                           <h4 class="title is-6">Reach the charger​</h4>
-                          <video autoplay controls muted loop playsinline height="50vh">
+                          <video controls muted loop playsinline height="50vh">
                               <source src="./static/videos/media10.mov" type="video/mp4">
                           </video>
                           <p>We achieve a precise end-effector pose required to unplug the charger.</p>
                       </div>
                       <div class="column">
                           <h4 class="title is-6">Reach the moon shaped object​</h4>
-                          <video autoplay controls muted loop playsinline height="50%">
+                          <video controls muted loop playsinline height="50%">
                               <source src="./static/videos/media11.mov" type="video/mp4">
                           </video>
                           <p>Our model accurately discerns the object specified in the textual instruction amidst multiple objects within the scene.​</p>
                       </div>
                       <div class="column">
                           <h4 class="title is-6">Reach the window​</h4>
-                          <video autoplay controls muted loop playsinline height="50%">
+                          <video controls muted loop playsinline height="50%">
                               <source src="./static/videos/media12.mov" type="video/mp4">
                           </video>
                           <p>Despite obscured visibility of the door handle, our model generates sub-goals and takes relevant actions to accomplish the task.​</p>
@@ -475,13 +475,13 @@ notable advancement in the field of visual servoing
       <!-- Benchmark 3 -->
       <div class="columns is-multiline">
           <div class="column is-one-fourth">
-              <h3 class="title is-4">xARM7</h3>
+              <h3 class="title is-4">Real-world (xARM7)</h3>
               <div class="content">
                   <div class="columns is-centered">
                     
                       <div class="column">
                           <h4 class="title is-6">Put the hexagon in the shape sorter</h4>
-                          <video autoplay controls muted loop playsinline height="50%">
+                          <video controls muted loop playsinline height="50%">
                               <source src="./static/videos/media14.mov" type="video/mp4">
                           </video>
                           <p>Our model generates relevant sub-goals and precisely models trajectories to place the hexagon into its shape sorter ​</p>
@@ -490,19 +490,21 @@ notable advancement in the field of visual servoing
                     
                       <div class="column" >
                           <h4 class="title is-6">Stack on the red square​</h4>
-                          <video autoplay controls muted loop playsinline height="50%">
+                          <video controls muted loop playsinline height="50%">
                               <source src="./static/videos/media15.mov" type="video/mp4">
                           </video>
+                          
                           <p>Our model accurately discerns the color and shape specified in the text prompt, even amidst multiple objects sharing identical color and shape within the scene.</p>
                       </div>
                       <div class="column" >
                           <h4 class="title is-6">Stack on the blue circle​</h4>
-                          <video autoplay controls muted loop playsinline height="50%">
+                          <video controls muted loop playsinline height="50%">
                               <source src="./static/videos/media13.mov" type="video/mp4">
                           </video>
-                          <p></p>
+                          <p>Our model precisely identifies the blue circle and stacks the triangle on the blue circle</p>
                       </div>
                       <!-- <p>Our model generates relevant sub-goals and precisely models trajectories to place the hexagon into its shape sorter.​</p> -->
+                      
                       
                             
                         
